@@ -1,0 +1,470 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+    
+    font-family: 'Open Sans', sans-serif;
+    line-height: 1.6;
+    background-color: #FDF5DF; 
+    color: #333333; /
+}
+
+#Logo {
+    width: 90px; 
+    margin: 0 0 auto 0;
+    z-index: 1;
+}
+
+#LinkP a {
+    color:#17575b;
+}
+
+/* Navigation Styling */
+header {
+    background-color: #5EBEC4; 
+    padding: 1rem;
+    color: white;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center; 
+}
+
+
+nav {
+    margin-left: auto; 
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: flex-end; 
+    flex-wrap: wrap;
+    margin: 0; 
+    padding: 0; 
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    padding: 0.5rem;
+    
+    transition: background-color 0.3s;
+}
+
+nav a:hover {
+   
+    color: #FFEB3B;
+    
+    
+}
+
+
+
+
+.menu-toggle {
+    display: none;
+    cursor: pointer;
+}
+
+.menu-toggle span {
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px;
+    background-color: white;
+}
+
+
+
+section {
+    padding: 2rem;
+    text-align: center;
+    height: 100vh; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+/* Home Section */
+#home {
+    background-color: #FFEB3B; 
+}
+
+#home h1 {
+    font-size: 3rem;
+}
+
+#home p {
+    font-size: 1.5rem;
+}
+
+
+
+#projects {
+   
+    
+
+    
+}
+#projects {
+    
+    position: relative; 
+  }
+  #projects h2{
+    color: #f8f7f7;
+  }
+  #projects video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+    z-index: -1;
+  }
+
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); 
+    gap: 1.5rem;
+    padding: 20px;
+}
+#projects a{
+    color: #333333;
+    padding: 15px;
+    text-decoration: none;
+}
+
+@media (max-width: 768px) {
+    .project-grid {
+        grid-template-columns: repeat(1, 1fr); 
+    }
+}
+
+.project-item {
+    /* background-color: #f8f8f8; */
+    background-color: rgb(249, 220, 1);
+    padding: 1rem;
+    border-radius: 8px;
+}
+
+.project-item h3 {
+    margin-bottom: 0.5rem;
+}
+
+/* SKILLS SECTION */
+
+
+/* SKILLS SECTION */
+
+#SKILLS {
+    padding: 20px;
+    /* background-color: #f4f4f4; */
+    background-image: url(assets/kari-shea-1SAnrIxw5OY-unsplash.jpg);
+  
+    position: relative;
+    place-items: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#SKILLS a {
+    text-align: center;
+}
+    
+
+#SKILLS  h2 {
+    color: #333333;;
+}
+
+
+
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); 
+    gap: 1.5rem;
+    padding: 20px;
+}
+
+.skill {
+    background-color: rgb(249, 220, 1);
+    color: #333333;
+    padding: 1rem;
+    text-align: center;
+    border-radius: 8px;
+}
+
+@media (max-width: 768px) {
+    .skills-grid {
+        grid-template-columns: repeat(2, 1fr); 
+    }
+}
+
+
+
+
+
+/* About Section */
+#about {
+    background-color: #5EBEC4; 
+    color: white;
+}
+
+#about p {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* Contact Section */
+#contact {
+    background-color: #FFEB3B; 
+}
+#contact a {
+    text-decoration: none;
+    /* color: #17575b; */
+    color: #333333;
+}
+
+
+footer {
+    text-align: center;
+    padding: 1rem;
+    background-color: #333333; 
+    color: white;
+}
+
+
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+        display: none;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    .menu-toggle.active + ul {
+        display: flex;
+    }
+
+    #home h1 {
+        font-size: 2rem;
+    }
+
+    #home p {
+        font-size: 1rem;
+    }
+}
+
+/* Container styling */
+.image {
+    position: relative;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.imageInn, .hoverImg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.default-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+    transition: opacity 0.5s ease;
+}
+
+.hover-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+
+.image:hover .default-img {
+    opacity: 0;
+}
+
+.image:hover .hover-img {
+    opacity: 1;
+}
+
+
+
+
+
+
+
+.container {
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    margin: 0 auto;
+}
+
+.container::before {
+    position: relative;
+    content: "";
+    width: 50px;
+    height: 10px;
+    left: 50%;
+    top: 100%;
+    transform: translateX(-50%);
+    background: #555;
+    border-radius: 50%;
+    animation: shadow-animate 1s infinite;
+}
+
+.container .ball {
+    
+    position: relative;
+    margin: 0 auto;
+    width: 50px;
+    height: 50px;
+    top: 0;
+    background: #faff5c;
+    border-radius: 50%;
+    box-shadow: 0 0 10px #faff5c, 0 0 30px #faff5c;
+    animation: ball-animate 15s infinite;
+}
+
+@keyframes ball-animate {
+    5% {
+        width: 50px;
+        height: 50px;
+    }
+
+    20% {
+        height: 60px;
+    }
+
+    30% {
+        width: 45px;
+        height: 60px;
+    }
+
+    50% {
+        width: 57px;
+        height: 35px;
+        transform: translateY(275px);
+    }
+
+    75% {
+        width: 50px;
+        height: 50px;
+    }
+}
+
+@keyframes shadow-animate {
+    25% {
+        width: 50px;
+        height: 10px;
+    }
+
+    50% {
+        width: 57px;
+        height: 10px;
+    }
+
+    75% {
+        width: 50px;
+        height: 10px;
+    }
+}
+
+
+/* NAME ANIMATION */
+@keyframes blink {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0; }
+}
+
+.namAn .key {
+    display: inline-block;
+    animation: blink 7s infinite;
+}
+
+.namAn .key:nth-child(1) { animation-delay: 0s; }
+.namAn .key:nth-child(2) { animation-delay: 0.1s; }
+.namAn .key:nth-child(3) { animation-delay: 0.2s; }
+.namAn .key:nth-child(4) { animation-delay: 0.3s; }
+.namAn .key:nth-child(5) { animation-delay: 0.4s; }
+.namAn .key:nth-child(6) { animation-delay: 0.5s; }
+.namAn .key:nth-child(7) { animation-delay: 0.6s; }
+.namAn .key:nth-child(8) { animation-delay: 0.7s; }
+.namAn .key:nth-child(9) { animation-delay: 0.8s; }
+
+
+@keyframes colorChange {
+    0% { color: rgb(239, 127, 222); }
+    50% { color: rgb(62, 168, 214); }
+    100% { color: rgb(248, 220, 62); }
+}
+
+.namAn .key {
+    animation: colorChange 3s infinite;
+}
+
+
+a {
+    color: inherit; 
+    text-decoration: none; 
+    position: relative; 
+    transition: color 0.3s ease, text-decoration-color 0.3s ease; 
+}
+
+a::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 2px; 
+    background-color: transparent; 
+    left: 0;
+    bottom: -3px; 
+    transition: background-color 0.3s ease; 
+}
+
+a:hover::after {
+    background-color: white; 
+}
+
+a:hover {
+    color: inherit; 
+}
+
+#SEHO {
+    animation: fadeInFadeOut 7s infinite;
+  }
+  
+  @keyframes fadeInFadeOut {
+    0% {
+      opacity: 0;
+    }
+    50% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0;
+    }
+  }
